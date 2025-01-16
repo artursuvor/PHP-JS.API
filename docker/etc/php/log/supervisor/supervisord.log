@@ -1,0 +1,88 @@
+2025-01-16 13:09:24,536 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2025-01-16 13:09:24,536 INFO Set uid to user 33 succeeded
+2025-01-16 13:09:24,539 INFO RPC interface 'supervisor' initialized
+2025-01-16 13:09:24,539 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-01-16 13:09:24,540 INFO supervisord started with pid 1
+2025-01-16 13:09:25,546 INFO spawned: 'composer' with pid 7
+2025-01-16 13:09:25,548 INFO spawned: 'php-fpm' with pid 8
+2025-01-16 13:09:26,577 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:09:26,578 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:09:29,896 INFO exited: composer (exit status 0; expected)
+2025-01-16 13:11:51,525 WARN received SIGQUIT indicating exit request
+2025-01-16 13:11:51,535 INFO waiting for php-fpm to die
+2025-01-16 13:11:51,584 INFO stopped: php-fpm (exit status 0)
+2025-01-16 13:11:56,588 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2025-01-16 13:11:56,588 INFO Set uid to user 33 succeeded
+2025-01-16 13:11:56,593 INFO RPC interface 'supervisor' initialized
+2025-01-16 13:11:56,593 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-01-16 13:11:56,593 INFO supervisord started with pid 1
+2025-01-16 13:11:57,606 INFO spawned: 'composer' with pid 6
+2025-01-16 13:11:57,613 INFO spawned: 'php-fpm' with pid 7
+2025-01-16 13:11:58,693 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:11:58,693 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:12:00,842 INFO exited: composer (exit status 0; expected)
+2025-01-16 13:13:09,135 WARN received SIGQUIT indicating exit request
+2025-01-16 13:13:09,137 INFO waiting for php-fpm to die
+2025-01-16 13:13:09,150 INFO stopped: php-fpm (exit status 0)
+2025-01-16 13:13:12,803 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2025-01-16 13:13:12,803 INFO Set uid to user 33 succeeded
+2025-01-16 13:13:12,808 INFO RPC interface 'supervisor' initialized
+2025-01-16 13:13:12,808 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-01-16 13:13:12,809 INFO supervisord started with pid 1
+2025-01-16 13:13:13,819 INFO spawned: 'composer' with pid 7
+2025-01-16 13:13:13,829 INFO spawned: 'php-fpm' with pid 8
+2025-01-16 13:13:14,886 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:13:14,887 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:13:17,031 INFO exited: composer (exit status 0; expected)
+2025-01-16 13:13:35,105 WARN received SIGQUIT indicating exit request
+2025-01-16 13:13:35,107 INFO waiting for php-fpm to die
+2025-01-16 13:13:35,126 INFO stopped: php-fpm (exit status 0)
+2025-01-16 13:13:38,231 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2025-01-16 13:13:38,231 INFO Set uid to user 33 succeeded
+2025-01-16 13:13:38,236 INFO RPC interface 'supervisor' initialized
+2025-01-16 13:13:38,237 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-01-16 13:13:38,237 INFO supervisord started with pid 1
+2025-01-16 13:13:39,244 INFO spawned: 'composer' with pid 7
+2025-01-16 13:13:39,248 INFO spawned: 'php-fpm' with pid 8
+2025-01-16 13:13:40,287 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:13:40,288 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:13:42,515 INFO exited: composer (exit status 0; expected)
+2025-01-16 13:14:25,666 WARN received SIGQUIT indicating exit request
+2025-01-16 13:14:25,671 INFO waiting for php-fpm to die
+2025-01-16 13:14:25,705 INFO stopped: php-fpm (exit status 0)
+2025-01-16 13:14:30,297 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2025-01-16 13:14:30,297 INFO Set uid to user 33 succeeded
+2025-01-16 13:14:30,301 INFO RPC interface 'supervisor' initialized
+2025-01-16 13:14:30,301 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-01-16 13:14:30,301 INFO supervisord started with pid 1
+2025-01-16 13:14:31,318 INFO spawned: 'composer' with pid 7
+2025-01-16 13:14:31,325 INFO spawned: 'php-fpm' with pid 8
+2025-01-16 13:14:32,382 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:14:32,383 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:14:34,504 INFO exited: composer (exit status 0; expected)
+2025-01-16 13:18:36,346 WARN received SIGQUIT indicating exit request
+2025-01-16 13:18:36,352 INFO waiting for php-fpm to die
+2025-01-16 13:18:36,393 INFO stopped: php-fpm (exit status 0)
+2025-01-16 13:19:04,118 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2025-01-16 13:19:04,119 INFO Set uid to user 33 succeeded
+2025-01-16 13:19:04,126 INFO RPC interface 'supervisor' initialized
+2025-01-16 13:19:04,126 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-01-16 13:19:04,127 INFO supervisord started with pid 1
+2025-01-16 13:19:05,138 INFO spawned: 'composer' with pid 7
+2025-01-16 13:19:05,146 INFO spawned: 'php-fpm' with pid 8
+2025-01-16 13:19:06,244 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:19:06,245 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:19:08,389 INFO exited: composer (exit status 0; expected)
+2025-01-16 13:19:37,493 WARN received SIGQUIT indicating exit request
+2025-01-16 13:19:37,496 INFO waiting for php-fpm to die
+2025-01-16 13:19:38,519 INFO stopped: php-fpm (exit status 0)
+2025-01-16 13:19:57,505 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2025-01-16 13:19:57,505 INFO Set uid to user 33 succeeded
+2025-01-16 13:19:57,509 INFO RPC interface 'supervisor' initialized
+2025-01-16 13:19:57,509 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-01-16 13:19:57,510 INFO supervisord started with pid 1
+2025-01-16 13:19:58,512 INFO spawned: 'composer' with pid 6
+2025-01-16 13:19:58,514 INFO spawned: 'php-fpm' with pid 7
+2025-01-16 13:19:59,546 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:19:59,547 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-16 13:20:02,041 INFO exited: composer (exit status 0; expected)

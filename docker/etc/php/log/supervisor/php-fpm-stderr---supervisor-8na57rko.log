@@ -1,0 +1,5 @@
+Cannot load Xdebug - it was already loaded
+[16-Jan-2025 13:19:58] NOTICE: [pool www] 'user' directive is ignored when FPM is not running as root
+[16-Jan-2025 13:19:58] NOTICE: [pool www] 'group' directive is ignored when FPM is not running as root
+172.29.0.3 -  16/Jan/2025:13:20:01 +0000 "GET /index.php" 200
+172.29.0.3 -  16/Jan/2025:13:20:02 +0000 "GET /index.php" 200

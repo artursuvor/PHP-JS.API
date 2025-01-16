@@ -1,0 +1,64 @@
+# InterviewTask React app with PHP backend #
+
+## Projekt - Git:
+- Github - Fork projektu na svuj github
+- Tento Váš forknutý repozitář nastavte jako private
+- vytvořte si novou branch do které budete zpracovávat zadání (název větve necháme na Vás)
+- po dokončení zadání vytvořte Pull Request do masteru/mainu
+- V Pull Requestu napsat co bylo změněno
+- Vytvořit/dopsat README.md s popisem jak to spustit (pokud jste nevyužili tuto šablonu)
+- poslat link s přístupem na repo nebo přidat naše emaily jako collaboratora:
+  - apudil@acmark.com
+  - okeprt@acmark.com
+  - jkovar@acmark.com
+
+## Frontend:
+- input pro zadani IČO, možnost do inputu zadat více IČO oddělených čárkou (získají se data pro všechny zadané IČA)
+- zobrazit seznam firem vrácené z BE
+- v seznamu zobrazit:
+    - ICO
+    - Název
+    - Adresu
+    - Datum zápisu
+    - Právní forma (pravnicka / fyzicka osoba)
+    - <em>[optional] NACE s překladem</em>
+- udělat druhý input a implementovat jednoduché vyhledávání v zobrazeném seznamu firem
+- nastylovat dle svých preferencí
+- <em>[optional] použití NPM knihoven zejména MUI5 ale můžete i jiné (které se Vám budou hodit)</em>
+- <em>[optional] export seznamu firem do csv</em>
+
+## Backend:
+- zpracovat request z FE
+- zavolat na ARES (Státní registr ekonomických subjektů https://ares.gov.cz/) pro získání dat o firmách
+- zpracovat odpověď z ARES
+- poslat zpracovaná data na FE která se zobrazí
+- <em>[optional] Využít knihoven (composer)</em>
+
+<br/>
+
+Oceníme vaše vlastní nápady a rozšíření řešení, které by mohly být zajímavé a užitečné. Další plus by byly testy.
+
+<br/>
+
+Pro Váš vývoj je předchystaná šablona s dockerem, která obsahuje PHP a React.
+Doporučujeme ji použít, ale můžete si vytvořit vlastní projekt a strukturu.
+
+# Použití Docker šablony #
+
+### Prerequisites:
+- installed npm
+- installed docker
+
+### 1) init files for docker:
+- ```sh docker_init.sh```
+
+### 2) setup .env -> see .env
+### 3) setup rest:
+  - ```docker compose build && docker compose up -d```
+  - ```cd frontend```
+  - ```npm install```
+  - ```npm run dev```
+
+### 4) testing:
+  - localhost:5150 -> you should see `"Hello World!"`
+  - localhost:8085 -> you should see default react app
