@@ -1,4 +1,6 @@
 # InterviewTask React app with PHP backend #
+### Nezveřejnujte zadání, nevytvářejte public forky! ###
+___
 
 ## Projekt - Git:
 - Github - Fork projektu na svuj github
@@ -62,3 +64,6 @@ Doporučujeme ji použít, ale můžete si vytvořit vlastní projekt a struktur
 ### 4) testing:
   - localhost:5150 -> you should see `"Hello World!"`
   - localhost:8085 -> you should see default react app
+
+___
+&copy; 2025 Acmark s.r.o. 
