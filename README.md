@@ -15,7 +15,8 @@ ___
   - jkovar@acmark.com
 
 ## Frontend:
-- input pro zadani IČO, možnost do inputu zadat více IČO oddělených čárkou (získají se data pro všechny zadané IČA)
+- Dvě možnosti vstupu, jedna pro zadání IČO, druhá pro zadání názvu firmy (např. dva taby...)
+- možnost do inputů zadat více IČO/Jmen Firem, oddělených středníkem [;] (získají se data pro všechny zadané IČA/Jména)
 - zobrazit seznam firem vrácené z BE
 - v seznamu zobrazit:
     - ICO
@@ -24,16 +25,18 @@ ___
     - Datum zápisu
     - Právní forma (pravnicka / fyzicka osoba)
     - <em>[optional] NACE s překladem</em>
-- udělat druhý input a implementovat jednoduché vyhledávání v zobrazeném seznamu firem
-- nastylovat dle svých preferencí
+- udělat další input a implementovat vyhledávání (filtrování) v zobrazeném seznamu firem
+- nastylovat uživatelsky přívětivě dle svých preferencí
 - <em>[optional] použití NPM knihoven zejména MUI5 ale můžete i jiné (které se Vám budou hodit)</em>
 - <em>[optional] export seznamu firem do csv</em>
 
 ## Backend:
-- zpracovat request z FE
+- zpracovat requesty z FE
 - zavolat na ARES (Státní registr ekonomických subjektů https://ares.gov.cz/) pro získání dat o firmách
 - zpracovat odpověď z ARES
 - poslat zpracovaná data na FE která se zobrazí
+- Využívat OOP
+- Doporučujeme použít knihovnu Guzzle pro HTTP requesty
 - <em>[optional] Využít knihoven (composer)</em>
 
 <br/>
@@ -54,7 +57,9 @@ Doporučujeme ji použít, ale můžete si vytvořit vlastní projekt a struktur
 ### 1) init files for docker:
 - ```sh docker_init.sh```
 
-### 2) setup .env -> see .env
+### 2) setup .env -> see .env 
+- [Linux] fill in your user UID/GID to WWW_UID/WWW_GID ... for permissions
+
 ### 3) setup rest:
   - ```docker compose build && docker compose up -d```
   - ```cd frontend```
