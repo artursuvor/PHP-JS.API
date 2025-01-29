@@ -2,6 +2,7 @@
     "require": {
         "php": "^8.2",
         "ext-curl": "*",
-        "ramsey/uuid": "^4.7"
+        "ramsey/uuid": "^4.7",
+        "guzzlehttp/guzzle": "^7.5"
     }
 }

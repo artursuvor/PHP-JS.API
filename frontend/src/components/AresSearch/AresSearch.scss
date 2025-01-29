@@ -1,0 +1,106 @@
+@use '../../styles/variables' as *;
+
+.ares-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  width: 50%;
+  color: $light-text;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &.dark-mode {
+    background-color: $dark-bg;
+    color: $dark-text;
+    transition: background-color 3s ease;
+  }
+
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 600px;
+    transition: background-color 0.3s ease;
+
+    .MuiTextField-root {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .MuiButton-root {
+      font-weight: bold;
+      border-radius: 4px;
+      text-transform: none;
+    }
+
+    .search-buttons {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+  }
+
+  .grid-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .company-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      justify-items: center;
+    }
+  }
+
+  .company-item {
+    padding: 12px;
+    background-color: $light-header-bg;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    &.dark-mode {
+      background-color: $dark-header-bg;
+    }
+
+    .company-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: inherit;
+    }
+
+    .MuiTypography-root {
+      font-size: 0.9rem;
+      color: inherit;
+    }
+  }
+
+  .pagination-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+
+    .MuiButton-root {
+      flex: 1;
+      max-width: 150px;
+    }
+  }
+
+  .pagination-info {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .MuiCircularProgress-root {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .MuiTypography-colorError {
+    color: #f44336;
+  }
+}

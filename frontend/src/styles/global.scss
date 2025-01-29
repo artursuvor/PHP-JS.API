@@ -1,0 +1,31 @@
+@use './variables' as *;
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $light-text;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease, font-family 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: $dark-bg;
+  color: $dark-text;
+}
+
+body.light-mode {
+  background-color: $light-bg;
+  color: $light-text;
+}
+
+h1, h2, h3 {
+  font-family: 'Smooch Sans', sans-serif;
+}
+
+
+

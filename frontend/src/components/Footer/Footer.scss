@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer.light {
+  background-color: $light-bg;
+  color: $light-text;
+}
+
+.footer.dark {
+  background-color: $dark-bg;
+  color: $dark-text;
+}

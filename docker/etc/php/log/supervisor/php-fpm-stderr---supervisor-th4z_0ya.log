@@ -1,0 +1,7 @@
+Cannot load Xdebug - it was already loaded
+[29-Jan-2025 09:12:00] NOTICE: [pool www] 'user' directive is ignored when FPM is not running as root
+[29-Jan-2025 09:12:00] NOTICE: [pool www] 'group' directive is ignored when FPM is not running as root
+172.18.0.2 -  29/Jan/2025:09:12:15 +0000 "POST /GetAresData.php" 200
+172.18.0.2 -  29/Jan/2025:09:13:00 +0000 "POST /GetAresData.php" 200
+172.18.0.2 -  29/Jan/2025:09:13:01 +0000 "POST /GetAresData.php" 200
+172.18.0.2 -  29/Jan/2025:09:13:03 +0000 "POST /GetAresData.php" 200

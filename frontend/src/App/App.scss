@@ -1,0 +1,77 @@
+@use '../styles/variables' as *;
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 74vh;
+  background-color: $light-bg;
+  color: $light-text;
+  transition: background-color 0.3s, color 0.3s;
+
+  &.dark {
+    background-color: $dark-bg;
+    color: $dark-text;
+
+    h3, h2, p {
+      color: $dark-text;
+      transition: background-color 0.3s, color 0.3s;
+
+    }
+  }
+
+  &.light {
+    background-color: $light-bg;
+    color: $light-text;
+
+    h3, h2, p {
+      color: $light-text;
+    }
+  }
+}
+
+main {
+  padding: 1rem;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: $light-header-bg;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+
+    &.dark {
+      background-color: $dark-header-bg;
+    }
+  }
+}
+
+.search-instructions {
+  font-size: 1rem;
+  margin-top: 20px;
+  text-align: left;
+  padding: 10px 20px;
+  background-color: $light-header-bg;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &.dark {
+    background-color: $dark-header-bg;
+    color: $dark-text;
+  }
+}
