@@ -151,7 +151,7 @@ const AresSearch = () => {
                 <Typography>Registration Date: {company.datumVzniku}</Typography>
                 <Typography>Legal Form: {company.pravniForma}</Typography>
                 <Typography>Executive: {company.dic}</Typography>
-                <Button onClick={() => handleAddToFavorites(company)} variant="outlined" color="primary">+</Button>
+                <Button onClick={() => handleAddToFavorites(company)} variant="outlined" color="primary"  title="Add to favorites">+</Button>
               </div>
             ))}
           </div>
