@@ -30,8 +30,9 @@ jobs:
            const vendor=p+'vendor';
            const tracked=cp.execFileSync('git',['ls-files','--',vendor],{encoding:'utf8'});
            if(tracked.trim()) {cp.execFileSync('git',['rm','--cached','-r','--quiet','--',vendor],{stdio:'inherit'});console.log('COMPOSER_VENDOR_UNTRACKED',dir);}
-           const install=run(['install','--no-plugins','--no-scripts','--no-interaction','--prefer-dist']);
-           console.log('COMPOSER_INSTALL',JSON.stringify({dir,status:install.status}));if(install.status!==0)console.log(install.stdout+install.stderr);
+           if(fs.existsSync(vendor))fs.rmSync(vendor,{recursive:true,force:true});
+          const install=run(['install','--no-plugins','--no-scripts','--no-interaction','--prefer-dist']);
+           console.log('COMPOSER_INSTALL',JSON.stringify({dir,status:install.status}));if(install.status!==0){console.log(install.stdout+install.stderr);process.exitCode=1;}
            allowed.push(p+'composer.lock');
           }
           const old=fs.existsSync('.gitignore')?fs.readFileSync('.gitignore','utf8'):'';
