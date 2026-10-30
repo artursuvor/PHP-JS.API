@@ -1,0 +1,48 @@
+name: Temporary Composer security audit
+on:
+  push:
+    branches: [codex/security-audit-2026-10-30]
+    paths: [.github/workflows/codex-security-composer.yml]
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Audit and update PHP dependencies
+        run: |
+          node - <<'NODE'
+          const fs=require('fs'), cp=require('child_process');
+          const dirs=[".","backend"];
+          const allowed=['.gitignore'];
+          for(const dir of dirs){
+           const p=dir==='.'?'':dir+'/';
+           const run=(args)=>cp.spawnSync('composer',args,{cwd:dir,encoding:'utf8',timeout:240000,maxBuffer:12*1024*1024});
+           const before=run(['audit','--locked','--format=json','--no-plugins','--no-scripts']);
+           const update=run(['update','--no-install','--no-scripts','--no-plugins','--no-interaction','--with-all-dependencies']);
+           console.log('COMPOSER_UPDATE',JSON.stringify({dir,status:update.status}));console.log(update.stdout+update.stderr);
+           const after=run(['audit','--locked','--format=json','--no-plugins','--no-scripts']);
+           for(const [phase,r] of [['before',before],['after',after]]){
+            try{const d=JSON.parse(r.stdout);console.log('COMPOSER_AUDIT',JSON.stringify({dir,phase,advisories:d.advisories,abandoned:d.abandoned,error:d.error}));}catch{console.log('COMPOSER_AUDIT_ERROR',JSON.stringify({dir,phase,stdout:r.stdout,stderr:r.stderr}));}
+           }
+           const vendor=p+'vendor';
+           const tracked=cp.execFileSync('git',['ls-files','--',vendor],{encoding:'utf8'});
+           if(tracked.trim()) {cp.execFileSync('git',['rm','--cached','-r','--quiet','--',vendor],{stdio:'inherit'});console.log('COMPOSER_VENDOR_UNTRACKED',dir);}
+           const install=run(['install','--no-plugins','--no-scripts','--no-interaction','--prefer-dist']);
+           console.log('COMPOSER_INSTALL',JSON.stringify({dir,status:install.status}));if(install.status!==0)console.log(install.stdout+install.stderr);
+           allowed.push(p+'composer.lock');
+          }
+          const old=fs.existsSync('.gitignore')?fs.readFileSync('.gitignore','utf8'):'';
+          if(!old.split(/\r?\n/).some(l=>l.trim()==='vendor/'))fs.writeFileSync('.gitignore',old.replace(/\s*$/,'')+'\nvendor/\n');
+          cp.execFileSync('git',['add','--',...allowed],{stdio:'inherit'});
+          if(cp.spawnSync('git',['diff','--cached','--quiet']).status!==0){
+           cp.execFileSync('git',['config','user.name','github-actions[bot]']);
+           cp.execFileSync('git',['config','user.email','41898282+github-actions[bot]@users.noreply.github.com']);
+           cp.execFileSync('git',['commit','-m','fix: update PHP dependencies and exclude generated vendor files'],{stdio:'inherit'});
+           cp.execFileSync('git',['push','origin','HEAD:codex/security-audit-2026-10-30'],{stdio:'inherit'});
+          }
+          const files=cp.execFileSync('git',['ls-files','-z'],{encoding:'utf8'}).split('\0').filter(f=>f.endsWith('.php')&&!/(^|\/)vendor\//.test(f));
+          for(const file of files){const r=cp.spawnSync('php',['-l',file],{encoding:'utf8'});console.log('PHP_SYNTAX',JSON.stringify({file,status:r.status}));if(r.status!==0){console.log(r.stdout+r.stderr);process.exitCode=1;}}
+          NODE
