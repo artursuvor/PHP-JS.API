@@ -90,3 +90,16 @@ To launch the full project, follow these steps:
    - Backend: Visit `http://localhost:5150` to see "Hello World!".
    - Frontend: Visit `http://localhost:8085` to see the React app.
 
+
+## Install locked dependencies
+
+Run these commands from the repository root before building or deploying:
+
+```bash
+npm ci
+npm ci --prefix frontend
+composer install
+composer install --working-dir backend
+```
+
+The frontend also imports packages from the root npm manifest. Generated `node_modules` and `vendor` directories are not committed; the lockfiles reproduce the audited dependencies. SheetJS is pinned to its maintained official release tarball because the npm registry release is outdated.
