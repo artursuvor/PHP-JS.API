@@ -3,7 +3,7 @@
     "axios": "^1.7.9",
     "notistack": "^3.0.2",
     "papaparse": "^5.5.2",
-    "xlsx": "^0.18.5"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
